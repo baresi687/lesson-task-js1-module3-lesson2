@@ -10,6 +10,21 @@ console.log(greet("Hreinn"));
 
 const resultDiv = document.querySelector(".result");
 
-const message = showSomething("success", "Success");
+const message = showSomething("error", "Error");
 
 resultDiv.innerHTML = message;
+
+// 3
+
+async function getFact() {
+  try {
+    const response = await fetch("https://cat-fact.herokuapp.com/facts");
+    const results = await response.json();
+    console.log(results[4].text);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log("This will displayed always");
+  }
+}
+getFact();
