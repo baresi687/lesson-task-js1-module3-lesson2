@@ -1,0 +1,15 @@
+* {
+  margin: 10px 0;
+}
+
+.success {
+  border: 1px solid green;
+  color: green;
+  padding: 1em;
+}
+
+.error {
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 1em;
+}
